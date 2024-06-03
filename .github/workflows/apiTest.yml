@@ -1,10 +1,10 @@
-name: Cypress Regression Tests
+apiTest.yml
+
+name: Cypress API Test
 on:
-  schedule:
-    - cron: "0 22 * * *"
   workflow_dispatch:
 jobs:
-  cypress-regression:
+  cypress-login-test:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repository
@@ -15,7 +15,7 @@ jobs:
         node-version: '20.12.2'
     - name: Install dependencies
       run: npm install
-    - name: Run Cypress regression tests
-      run: npm run cy:regression
+    - name: Run Cypress api test
+      run: npm run cy:apiTest
       env:
-        CI: true
+         CI: true
