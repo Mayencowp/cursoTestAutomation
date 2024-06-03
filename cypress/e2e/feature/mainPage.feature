@@ -1,3 +1,4 @@
+@regression @curso
 Feature: Visit Main Page
 
 Scenario: Main page is visible

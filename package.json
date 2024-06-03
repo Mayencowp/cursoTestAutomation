@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:smoke": "cypress run --env tags=@smoke",
+    "cy:regression": "cypress run --env tags=@regression",
+    "cy:cursoTestAutomation": "cypress run --env tags=@curso"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +19,8 @@
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/e2e/step-definitions/*.js"
-}
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
+  }
 }
